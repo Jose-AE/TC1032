@@ -148,7 +148,7 @@ With this format you can do addition as if they both were normal binary numbers,
 
 - Sign-bit stays as `0` as its a positive number
 
-- Normalize the binary floating point number <br/>
+- Normalize the binary floating point number (make it format 1.xxxx) <br/>
   $101.101_{2}\rightarrow1.01101\times2^2$ (exp 2 since the point was moved 2 times to the left )
 
 - Add bias to exponent<br/> $2_{10}+127_{10}=129\rightarrow$ `10000001` in binary <br/>The bias depends on the size available for the exponent in this case its 8-Bits so its 127, the fomrula is:<br/> Bias $= 2^{(k-1)} - 1$ where k is the number of bits in the exponent field.
