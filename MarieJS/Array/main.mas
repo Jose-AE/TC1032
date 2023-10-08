@@ -1,0 +1,21 @@
+loop,	Input   //read input into AC
+        StoreI currAdress   //store AC into the adress that currAdress holds
+        
+        //increment currAdress by 1
+		Load currAdress 
+        Add one
+		Store currAdress
+        
+        //load and subt 1 to counter
+		Load counter
+		Subt one
+        Store counter
+        Skipcond 400 //if counter == 0 halt else loop
+        Jump loop 
+        Halt
+
+
+
+currAdress, DEC 128 //init currAdress to 128
+counter, DEC 50  //init counter to 50
+one, DEC 1  //init the constant of the value 1
