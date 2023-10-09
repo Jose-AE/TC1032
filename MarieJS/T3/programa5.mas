@@ -1,0 +1,32 @@
+//Realiza un programa que calcule: Y=X-2*A-3*B-4*C (programa5.mas).
+
+
+// Add x
+Clear 
+Add X
+
+//add -2*A
+Subt A
+Subt A
+
+// add -3*B
+Subt B
+Subt B
+Subt B
+
+// add -4*c
+Subt C
+Subt C
+Subt C
+Subt C
+
+Store Y
+Output
+Halt
+
+
+Y, DEC 0
+X, DEC 0
+A, DEC 0
+B, DEC 0
+C, DEC 0
