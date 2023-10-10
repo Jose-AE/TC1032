@@ -1,0 +1,32 @@
+//Realiza un programa que calcule: Y=5*(A-B+C) (programa6.mas).
+
+
+
+// temp = (A-B+C)
+Clear 
+Add A
+Subt B
+Add C
+
+Store TEMP
+
+
+//add 5*temp
+Clear 
+Add TEMP
+Add TEMP
+Add TEMP
+Add TEMP
+Add TEMP
+
+
+Store Y
+Output
+Halt
+
+
+Y, DEC 0
+TEMP, DEC 0
+A, DEC 0
+B, DEC 0
+C, DEC 0
