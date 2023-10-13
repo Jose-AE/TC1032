@@ -1,0 +1,72 @@
+//Realiza un programa que nos diga la longitud de un string, 
+//del cual conoces la dirección donde inicia y termina cuando encuentra 
+//el NULL en el contenido de memoria; asume que el string está en ASCII 
+
+//set string start adress
+Input 
+Store stringStartAdress
+Store tempAdress
+
+//Ask for ascci chars until input null (0) 
+inputLoop,  Input
+            Skipcond 400 
+            Jump storeChar //if input != 0
+            //else 
+            Jump getLength
+
+
+            
+
+
+storeChar,  StoreI tempAdress //store input(last AC) into the adress that tempAdress points to 
+                
+            //increment tempAdress by 1
+            Load tempAdress 
+            Add one
+            Store tempAdress
+            Jump inputLoop
+
+
+
+getLength,  Load stringStartAdress
+            Store tempAdress
+            LoadI stringStartAdress
+            Skipcond 400
+            Jump stringLoop //if string start adress ptr value !=0
+            //else
+            Jump haltProgram
+
+
+
+stringLoop, Load stringLength //add one to stringlength
+            Add one
+            Store stringLength
+
+
+            //increment temp adress by one
+            Load tempAdress
+            Add one
+            Store tempAdress
+
+            
+            //if tempadress ptr val == 0 halt  else go back to stringLoop
+            LoadI tempAdress
+            Skipcond 400 
+            Jump stringLoop 
+
+
+
+
+//halt and print length
+haltProgram,    Load stringLength
+                Output 
+                Halt
+
+
+
+
+
+stringStartAdress, HEX 0
+tempAdress, HEX 0
+one, DEC 1 
+stringLength, DEC 0
