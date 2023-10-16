@@ -1,0 +1,27 @@
+﻿/Ejercicio 2-4.4tarea 
+//Jose Luis Almeida Esparza A01028493
+
+Getch, LoadI Chptr
+Skipcond 400
+Jump Outp
+Halt
+Outp, Output
+Load Chotr
+Add One
+Store Chptr
+Jump Getch
+One, Hex 0001
+Chptr, Hex 10B
+Chotr, Dec 072
+Dec 101
+Dec 108
+Dec 108
+Dec 111
+Dec 032
+Dec 119
+Dec 111
+Dec 114
+Dec 108
+Dec 100
+Dec 033
+Dec 000

@@ -1,3 +1,5 @@
+//Jose Luis Almeida Esparza A01028493
+
 //Realiza un programa que nos diga la longitud de un string, 
 //del cual conoces la dirección donde inicia y termina cuando encuentra 
 //el NULL en el contenido de memoria; asume que el string está en ASCII 

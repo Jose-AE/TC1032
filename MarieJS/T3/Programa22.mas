@@ -1,0 +1,19 @@
+﻿/Ejercicio 2-4.3tarea 
+//Jose Luis Almeida Esparza A01028493
+
+Load X    
+Skipcond 400   
+Jump Else  
+Load X      
+Add X      
+Store X     
+Jump Endif   
+
+Else, Load Y    
+Subt X      
+Store Y    
+
+Endif, Halt   
+
+X, Dec 12     
+Y, Dec 20     

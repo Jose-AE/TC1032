@@ -1,0 +1,33 @@
+﻿/Ejercicio 2-4.2tarea 
+//Jose Luis Almeida Esparza A01028493
+
+
+Load Addr 
+Store Next 
+Load Num 
+Subt One 
+Store Ctr 
+Loop, Load Sum 
+AddI Next 
+Store Sum 
+Load Next 
+Add One 
+Store Next 
+Load Ctr 
+Subt One 
+Store Ctr 
+Skipcond 000
+
+Jump Loop
+Halt 
+Addr, Hex 117 
+Next, Hex 0 
+Num, Dec 5
+Sum, Dec 0 
+Ctr, Hex 0
+One, Dec 1
+Dec 10
+Dec 15
+Dec 20
+Dec 25
+Dec 30

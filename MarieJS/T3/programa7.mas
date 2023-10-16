@@ -1,0 +1,34 @@
+﻿//Jose Luis Almeida Esparza A01028493
+
+//Problema 7. Realiza un programa que invierta 4 localidades de memoria.
+
+    Load A
+    Store T1 
+
+    Load B
+    Store T2     
+
+    Load C
+    Store T3    
+
+    Load D
+    Store A        
+
+    Load T3
+    Store D        
+    Load T2
+    Store C        
+
+    Load T1
+    Store B        
+
+    Halt
+
+A, DEC 20     
+B, DEC 10
+C, DEC 40
+D, DEC 30
+T1, DEC 0      
+T2, DEC 0      
+T3, DEC 0      
+
