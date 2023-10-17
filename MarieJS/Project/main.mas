@@ -60,7 +60,16 @@ printMean,  Load arrStartAdress
                 
 
 
-sumArray,   AddI tempAdress // add the value temp adress points to 
+sumArray,   Load arrSum
+            AddI tempAdress // add the value temp adress points to \
+            Store arrSum
+
+            
+            
+            //Increment temp adress by one
+            Load tempAdress
+            Add ONE
+            Store tempAdress
 
 
             //Increment j by one
@@ -69,14 +78,14 @@ sumArray,   AddI tempAdress // add the value temp adress points to
             Store j
 
 
+
+
             //check if j == 9
             Subt NINE
             Skipcond 400
-            Jump sumArray // jump if j == 9
+            Jump sumArray // skip if j == 9
 
-            //else
-            Store arrSum
-            
+                        
             //reset j to 0
             Clear 
             Store j
