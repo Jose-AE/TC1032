@@ -1,0 +1,106 @@
+
+Load arrStartAdress
+Store tempAdress
+
+
+askInput,   Input
+            Add ONE
+            Skipcond 400
+            Jump storeInput //skip this line if input is -1 
+            //Else
+            Jump haltFlag
+
+
+storeInput, Subt ONE // cancel out last add one
+        
+            StoreI tempAdress  //store input in pointer
+
+
+            //increment temp adress
+            Load tempAdress
+            Add ONE
+            Store tempAdress
+
+
+            //Increment i by one
+            Load i
+            Add ONE
+            Store i
+            
+            
+            //check if i == 9
+            Load i
+            Subt NINE
+            Subt ONE
+            Skipcond 400
+            Jump askInput //skip if i == 9
+            
+
+            //else 
+            
+
+            //jump print mean
+            Jump printMean
+
+
+            
+
+
+
+printMean,  Load arrStartAdress
+            Store tempAdress
+
+            Jump sumArray
+
+
+
+            
+
+
+                
+
+
+sumArray,   AddI tempAdress // add the value temp adress points to 
+
+
+            //Increment j by one
+            Load j
+            Add ONE
+            Store j
+
+
+            //check if j == 9
+            Subt NINE
+            Skipcond 400
+            Jump sumArray // jump if j == 9
+
+            //else
+            Store arrSum
+            
+            //reset j to 0
+            Clear 
+            Store j
+
+
+            Load arrSum
+            Output
+            Halt
+
+
+            
+
+
+
+
+
+
+haltFlag, Halt
+
+
+arrSum, DEC 0
+tempAdress, HEX 600
+arrStartAdress, HEX 300
+NINE, DEC 9
+ONE, DEC 1 
+i, DEC 0
+j, DEC 0

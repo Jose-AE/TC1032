@@ -19,3 +19,5 @@ loop,	Input   //read input into AC
 currAdress, DEC 128 //init currAdress to 128
 counter, DEC 50  //init counter to 50
 one, DEC 1  //init the constant of the value 1
+
+
