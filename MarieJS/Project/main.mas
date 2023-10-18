@@ -30,8 +30,7 @@ storeInput, Subt ONE // cancel out last add one
             
             //check if i == 9
             Load i
-            Subt NINE
-            Subt ONE
+            Subt arrSize
             Skipcond 400
             Jump askInput //skip if i == 9
             
@@ -80,8 +79,8 @@ sumArray,   Load arrSum
 
 
 
-            //check if j == 9
-            Subt NINE
+            //check if j == arrsize (10)
+            Subt arrSize
             Skipcond 400
             Jump sumArray // skip if j == 9
 
@@ -109,7 +108,7 @@ haltFlag, Halt
 arrSum, DEC 0
 tempAdress, HEX 600
 arrStartAdress, HEX 300
-NINE, DEC 9
+arrSize, DEC 2
 ONE, DEC 1 
 i, DEC 0
 j, DEC 0
