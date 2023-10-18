@@ -8,7 +8,7 @@ askInput,   Input
             Skipcond 400
             Jump storeInput //skip this line if input is -1 
             //Else
-            Jump haltFlag
+            Jump setup_sum_array
 
 
 storeInput, Subt ONE // cancel out last add one
@@ -39,17 +39,17 @@ storeInput, Subt ONE // cancel out last add one
             
 
             //jump print mean
-            Jump printMean
+            Jump setup_sum_array
 
 
             
 
 
 
-printMean,  Load arrStartAdress
-            Store tempAdress
+setup_sum_array,    Load arrStartAdress //reset temp adress 
+                    Store tempAdress
 
-            Jump sumArray
+                    Jump sum_array
 
 
 
@@ -58,8 +58,7 @@ printMean,  Load arrStartAdress
 
                 
 
-
-sumArray,   Load arrSum
+sum_array,  Load arrSum
             AddI tempAdress // add the value temp adress points to \
             Store arrSum
 
@@ -76,25 +75,69 @@ sumArray,   Load arrSum
             Add ONE
             Store j
 
-
-
-
             //check if j == arrsize (10)
-            Subt arrSize
+            Subt i //number of numbers in arr, will moslty be 10 only less on last batch 
             Skipcond 400
-            Jump sumArray // skip if j == 9
+            Jump sum_array // skip if j == 9
+        
+            //once calculated arrSum:
 
-                        
             //reset j to 0
             Clear 
             Store j
 
+            Jump setup_division
 
-            Load arrSum
+
+setup_division, Load arrStartAdress //reset temp adress 
+                Store tempAdress
+
+
+                //load arr sum to div remainder
+                Load arrSum
+                Store divRemainder
+
+                //reset i to 0-------------------------------------------------------------------------------------------------------
+                //Clear
+                //Store i 
+
+                Jump divide_arr_sum
+
+
+divide_arr_sum, Load divRemainder //55
+                Subt i //55 - 5 = 50 
+                Store divRemainder
+
+                //if divRemainder <0 or divRemainder == 0 show mean 
+                Load divRemainder
+                Skipcond 000
+                Jump div_else
+                
+            
+                //else
+                Jump test_flag
+
+
+div_else,       Clear
+                //add 1 to mean (it divides +1 time )
+                Load mean
+                Add ONE
+                Store mean
+
+                //loop 
+                Jump divide_arr_sum
+
+
+                
+                
+
+
+
+
+
+test_flag,  Load mean
             Output
             Halt
-
-
             
 
 
@@ -102,13 +145,15 @@ sumArray,   Load arrSum
 
 
 
-haltFlag, Halt
+halt_flag,  Halt
 
 
 arrSum, DEC 0
 tempAdress, HEX 600
 arrStartAdress, HEX 300
-arrSize, DEC 2
+arrSize, DEC 10
+divRemainder, DEC 0
+mean, DEC 0
 ONE, DEC 1 
 i, DEC 0
 j, DEC 0
