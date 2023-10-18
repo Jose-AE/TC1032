@@ -49,7 +49,12 @@ storeInput, Subt ONE // cancel out last add one
 setup_sum_array,    Load arrStartAdress //reset temp adress 
                     Store tempAdress
 
+                    //if = 0, (inputed -1 on first num) halt
+                    Load i
+                    Skipcond 400
                     Jump sum_array
+
+                    Jump halt_flag
 
 
 
@@ -97,9 +102,7 @@ setup_division, Load arrStartAdress //reset temp adress
                 Load arrSum
                 Store divRemainder
 
-                //reset i to 0-------------------------------------------------------------------------------------------------------
-                //Clear
-                //Store i 
+               
 
                 Jump divide_arr_sum
 
@@ -115,7 +118,8 @@ divide_arr_sum, Load divRemainder //55
                 
             
                 //else
-                Jump test_flag
+                
+                Jump setup_loop
 
 
 div_else,       Clear
@@ -123,26 +127,41 @@ div_else,       Clear
                 Load mean
                 Add ONE
                 Store mean
-
+                
                 //loop 
                 Jump divide_arr_sum
 
 
                 
-                
+setup_loop, Clear
+
+            //show mean 
+            Load mean
+            Output 
 
 
+            //reset mean 
+            Clear
+            Store mean
+
+            //reset arr sum
+            Store arrSum
 
 
-
-test_flag,  Load mean
-            Output
-            Halt
+            //check if should loop again
+            Load i 
+            Subt arrSize
             
+            Skipcond 400 
+            Jump halt_flag
 
 
+            //else reset i = 0
+            Load i 
+            Clear
+            Store i
 
-
+            Jump askInput
 
 
 halt_flag,  Halt
