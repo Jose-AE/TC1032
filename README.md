@@ -74,11 +74,11 @@
 
 Left to the point (`xxx`.xxx)
 <br/>
-<img src="images/image.png" alt="drawing" width="300"/>
+<img src="https://i.imgur.com/pWndskJ.png" alt="drawing" width="300"/>
 
 Right to the point (xxx.`xxx`) (Decide on a level of precision as it will go on forever)
 <br/>
-<img src="images/image2.png" alt="drawing" width="300"/>
+<img src="https://i.imgur.com/zHtXVsD.png" alt="drawing" width="300"/>
 
 </blockquote>
 
@@ -88,7 +88,7 @@ Right to the point (xxx.`xxx`) (Decide on a level of precision as it will go on 
 
 Add sum of powers
 <br/>
-<img src="images/1image.png" alt="drawing" width="500"/>
+<img src="https://i.imgur.com/8y6AdNS.png" alt="drawing" width="500"/>
 
 </blockquote>
 
@@ -98,7 +98,7 @@ Add sum of powers
 
 Split it into parts
 <br/>
-<img src="images/3image.png" alt="drawing" width="500"/>
+<img src="https://i.imgur.com/WXCF9fs.png" alt="drawing" width="500"/>
 
 </blockquote>
 
@@ -108,7 +108,7 @@ Split it into parts
 
 Split it into parts
 <br/>
-<img src="images/4image.png" alt="drawing" width="300"/>
+<img src="https://i.imgur.com/4aTBjhs.png" alt="drawing" width="300"/>
 
 </blockquote>
 
@@ -120,7 +120,7 @@ Split it into parts
 
 <b>Sign-Magnitude (SM)</b> -Last bit to the left dictates if it's positive or negative
 
-<img src="images/5image.png" alt="drawing" width="300"/>
+<img src="https://i.imgur.com/vMJgP7z.png" alt="drawing" width="300"/>
 
 </blockquote>
 
@@ -130,7 +130,7 @@ Split it into parts
 
 <b>2's complement (C2)</b> -Last bit to the left is 0, to convert number to negative invert all bits an add 1
 
-<img src="images/7image.png" alt="drawing" width="300"/>
+<img src="https://i.imgur.com/4ac1j7m.png" alt="drawing" width="300"/>
 
 With this format you can do addition as if they both were normal binary numbers, and get the result in C2 format
 
